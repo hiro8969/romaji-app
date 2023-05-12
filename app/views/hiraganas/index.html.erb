@@ -1,0 +1,6 @@
+<h1>ひらがな一覧</h1>
+
+<%= form_tag({ action: 'show' }, method: 'get') do %>
+  <%= select_tag :id, options_for_select(@hiraganas.collect { |h| [h.name, h.id] }) %>
+  <%= submit_tag '変換する' %>
+<% end %>
